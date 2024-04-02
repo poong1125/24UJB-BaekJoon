@@ -1,6 +1,8 @@
+package q2741;
+
 import java.util.Scanner;
 
-public class q2741 {
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner a = new Scanner(System.in);
@@ -14,3 +16,7 @@ public class q2741 {
 	}
 
 }
+
+
+
+
