@@ -26,8 +26,8 @@ public class Main {
 			dp[i][2] = RGB[i][2] + Math.min(dp[i - 1][0], dp[i - 1][1]);
 		}
 
-		int siuuu = Math.min(dp[input - 1][0], Math.min(dp[input - 1][1], dp[input - 1][2]));
-		System.out.println(siuuu);
+		int D4C = Math.min(dp[input - 1][0], Math.min(dp[input - 1][1], dp[input - 1][2]));
+		System.out.println(D4C);
 	}
 }
 
