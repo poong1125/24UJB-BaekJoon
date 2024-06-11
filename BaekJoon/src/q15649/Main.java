@@ -1,30 +1,39 @@
 package q15649;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class Main {
+   static int[] c;
+   static int M, N;
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		String inp[] = bf.readLine().split(" ");
-		int input1 = Integer.parseInt(inp[0]);
-		int input2 = Integer.parseInt(inp[1]);
-		bf.close();
-		
-		for(int i = 0; i < input1; i++) {
-			for(int o = 0; o < input2; o++) {
-				
-			}
-			bw.write();
-			bw.newLine();
-			bw.flush();
-		}
-		bw.close();
-	}
+   public static void f(int n) {
+      if (n == N) {
+//         for (int i = 0; i < N; i++) {
+//            for (int j = 0; j < N; j++) {
+//               if (i != j && c[i] == c[j])
+//                  return;
+//            }
+//         }
 
+         for (int i = 0; i < N; i++) {
+            System.out.print(c[i] + " ");
+         }
+         System.out.println();
+         return;
+      }
+      for (int i = 1; i <= M; i++) {
+         c[n] = i;
+         f(n + 1);
+      }
+   }
+
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      M = sc.nextInt();
+      N = sc.nextInt();
+      c = new int[N];
+      sc.close();
+
+      f(0);
+   }
 }
